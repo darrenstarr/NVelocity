@@ -1,0 +1,5 @@
+﻿This is a simple test
+of substitution.
+Here is the first example of substitution $myVariable1 and it should be equal to Bob
+Here is the second example of substitution $myVariable2 and it should be equal to Kevin
+Here is the third example of substitution $myVariable3 and it should be equal to Stuart

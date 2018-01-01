@@ -1,0 +1,5 @@
+﻿This is a simple test
+of substitution.
+Here is the first example of substitution Bob and it should be equal to Bob
+Here is the second example of substitution Kevin and it should be equal to Kevin
+Here is the third example of substitution Stuart and it should be equal to Stuart
