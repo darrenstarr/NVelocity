@@ -9,6 +9,16 @@
   <ItemGroup>
     <EmbeddedResource Include="TestData\BasicSubstitution\After.txt" />
     <EmbeddedResource Include="TestData\BasicSubstitution\Before.txt" />
+    <EmbeddedResource Include="TestData\ConditionalInsertionElse\After.txt" />
+    <EmbeddedResource Include="TestData\ConditionalInsertionElse\Before.txt" />
+    <EmbeddedResource Include="TestData\ConditionalInsertionElseIf\After.txt" />
+    <EmbeddedResource Include="TestData\ConditionalInsertionElseIf\Before.txt" />
+    <EmbeddedResource Include="TestData\ConditionalInsertionIf\After.txt" />
+    <EmbeddedResource Include="TestData\ConditionalInsertionIf\Before.txt" />
+    <EmbeddedResource Include="TestData\SetValue\After.txt" />
+    <EmbeddedResource Include="TestData\SetValue\Before.txt" />
+    <EmbeddedResource Include="TestData\StringOperations\After.txt" />
+    <EmbeddedResource Include="TestData\StringOperations\Before.txt" />
   </ItemGroup>
 
   <ItemGroup>

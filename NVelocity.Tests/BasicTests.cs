@@ -50,5 +50,103 @@ namespace NVelocity.Tests
 
             Assert.Equal(after, processedText);
         }
+
+        [Fact]
+        public void SetValue()
+        {
+            var method = GetCurrentMethod();
+            var before = GetSampleData("NVelocity.Tests.TestData." + method + ".Before.txt");
+            var after = GetSampleData("NVelocity.Tests.TestData." + method + ".After.txt");
+
+            var context = new VelocityContext();
+
+            var engine = new VelocityEngine();
+            engine.Init();
+
+            var outputWriter = new StringWriter();
+            engine.Evaluate(context, outputWriter, method, before);
+            var processedText = outputWriter.GetStringBuilder().ToString();
+
+            Assert.Equal(after, processedText);
+        }
+
+        [Fact]
+        public void StringOperations()
+        {
+            var method = GetCurrentMethod();
+            var before = GetSampleData("NVelocity.Tests.TestData." + method + ".Before.txt");
+            var after = GetSampleData("NVelocity.Tests.TestData." + method + ".After.txt");
+
+            var context = new VelocityContext();
+
+            var engine = new VelocityEngine();
+            engine.Init();
+
+            var outputWriter = new StringWriter();
+            engine.Evaluate(context, outputWriter, method, before);
+            var processedText = outputWriter.GetStringBuilder().ToString();
+
+            Assert.Equal(after, processedText);
+        }
+
+        [Fact]
+        public void ConditionalInsertionIf()
+        {
+            var method = GetCurrentMethod();
+            var before = GetSampleData("NVelocity.Tests.TestData." + method + ".Before.txt");
+            var after = GetSampleData("NVelocity.Tests.TestData." + method + ".After.txt");
+
+            var context = new VelocityContext();
+            context.Put("minion", "Bob");
+
+            var engine = new VelocityEngine();
+            engine.Init();
+
+            var outputWriter = new StringWriter();
+            engine.Evaluate(context, outputWriter, method, before);
+            var processedText = outputWriter.GetStringBuilder().ToString();
+
+            Assert.Equal(after, processedText);
+        }
+
+        [Fact]
+        public void ConditionalInsertionElseIf()
+        {
+            var method = GetCurrentMethod();
+            var before = GetSampleData("NVelocity.Tests.TestData." + method + ".Before.txt");
+            var after = GetSampleData("NVelocity.Tests.TestData." + method + ".After.txt");
+
+            var context = new VelocityContext();
+            context.Put("minion", "Stuart");
+
+            var engine = new VelocityEngine();
+            engine.Init();
+
+            var outputWriter = new StringWriter();
+            engine.Evaluate(context, outputWriter, method, before);
+            var processedText = outputWriter.GetStringBuilder().ToString();
+
+            Assert.Equal(after, processedText);
+        }
+
+        [Fact]
+        public void ConditionalInsertionElse()
+        {
+            var method = GetCurrentMethod();
+            var before = GetSampleData("NVelocity.Tests.TestData." + method + ".Before.txt");
+            var after = GetSampleData("NVelocity.Tests.TestData." + method + ".After.txt");
+
+            var context = new VelocityContext();
+            context.Put("minion", "Dave");
+
+            var engine = new VelocityEngine();
+            engine.Init();
+
+            var outputWriter = new StringWriter();
+            engine.Evaluate(context, outputWriter, method, before);
+            var processedText = outputWriter.GetStringBuilder().ToString();
+
+            Assert.Equal(after, processedText);
+        }
     }
 }

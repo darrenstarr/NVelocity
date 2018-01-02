@@ -1,0 +1,9 @@
+﻿#if ($minion == "Bob")
+This is the first minion
+#elseif ($minion == "Kevin")
+This is the second minion
+#elseif ($minion == "Stuart")
+This is the third minion
+#else
+The minion is unknown
+#end

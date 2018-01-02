@@ -1,0 +1,6 @@
+﻿#set ($message = "Hello World")
+#set ($test = [0..9])
+This is a message that says $message
+#foreach($elem in $test)
+And this is a property of the Pizza Lord $elem
+#end
